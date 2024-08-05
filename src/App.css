@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligth-pink: #a2a1a1;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --papaya: papayawhip;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xl: 24px;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: var(--white);
+    /* background-color: papayawhip; */
+    color: #000000;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.from-container {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr 1fr;
+    width: 350px;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    width: 150px;
+    margin-bottom: 30px;
+    justify-self: center;
+    display: none;
+    /*lo ocultamos para desktop 
+    display: none; */
 }
 
-.App-link {
-  color: #61dafb;
+.form{
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form a {     
+    text-align: center;
+    margin-top: 18px;
+    font-size: var(--sm);
+    color: var(--hospital-green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.label{
+    font-size: var(--sm);
+    /* Grosor de la letra */
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-left: 10px;
+}
+
+.input {
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 18px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* padding, Separa la caja de input de la palabra password */
+}
+
+.input-email {
+    margin-bottom: 22px;
+}
+
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 6px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.secundary-button{
+    border-radius: 6px;
+    background-color: var(--white);
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-top: 60px;
+}
+
+@media (max-width: 640px){
+    .logo {
+        display: block;
+    }
+    .label {
+        font-size: var(--lg);
+        /* Grosor de la letra */
+        font-weight: bold;
+        margin-bottom: 12px;
+        margin-left: 10px;
+    }
+
+    .secundary-button{
+        margin-top: 168px;
+    }
 }
